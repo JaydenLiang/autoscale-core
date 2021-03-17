@@ -126,12 +126,12 @@ jobs:
       # check code style and format against pre-defined eslint rules
       - name: Check code format
         run: npm run lint-check
+      # build the source code for further processing
+      - name: Build
+        run: npm run build
       # run all required tests
       - name: Run tests
         run: npm test
-      # check build process
-      - name: Verify building
-        run: npm run build
   versioning:
     name: versioning
     runs-on: ubuntu-latest
